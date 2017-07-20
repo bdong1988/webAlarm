@@ -1,0 +1,5 @@
+<a class="text-field" ng-click="warpCallback('itemClicked', item, $event);"><i ng-click="itemExpended(item, $event);" class="{{getItemIcon(item)}} icon-field"></i>{{item[textField]}}<i ng-show="item.isBusy" class="fa fa-circle-o-notch fa-spin"></i></a>
+<ul ng-if="!isLeaf(item)" ng-show="item.$$isExpend" class="nav nav-pills nav-stacked sideNav">
+  <li ng-repeat="item in item.children" ng-include="itemTemplateUrl || 'views/treeItem.html'" ng-class="item.bSelected?'active':''">
+  </li>
+</ul>

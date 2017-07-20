@@ -1,0 +1,19 @@
+﻿<div class="panel-group">
+  <div class="panel panel-warning">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" href="{{'#' + groupItem.fullName}}">
+          <span class="glyphicon glyphicon-folder-open">{{groupItem.name}}</span>
+        </a>
+      </h4>
+    </div>
+    <div id="{{groupItem.fullName}}" class="panel-collapse">
+      <div class="panel-body">
+      <group-panel ng-repeat="group in gorupItem.subGroupList"></group-panel>
+        <div class="list-group">
+          <a href="#" class="list-group-item list-group-item-danger" ng-repeat="alarm in groupItem.alarmList"><span class="glyphicon glyphicon-warning-sign"> {{'  ' + alarm.name}}</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
